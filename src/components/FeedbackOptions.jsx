@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -19,13 +19,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   );
 };
 
-// Statistics.propTypes = {
-//   friends: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       avatar: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
-//       id: PropTypes.number.isRequired,
-//     }).isRequired
-//   ).isRequired,
-// };
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+};

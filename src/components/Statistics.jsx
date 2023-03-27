@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 export const Statistics = ({
   good,
   neutral,
@@ -36,13 +36,10 @@ export const Statistics = ({
   );
 };
 
-// Statistics.propTypes = {
-//   friends: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       avatar: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
-//       id: PropTypes.number.isRequired,
-//     }).isRequired
-//   ).isRequired,
-// };
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.func.isRequired,
+  positivePercentage: PropTypes.func.isRequired,
+};
